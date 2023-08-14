@@ -1,122 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230814 00:12:26.785" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230814 00:34:52.034" rpa="false" schemaversion="4">
 <suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\Users\mathe\Documents\Ambientes FC\robotframework\amazon_testes_gherkin_bdd.robot">
-<test id="s1-t1" name="Caso de Teste 02 - Pesquisa de um Produto" line="20">
+<test id="s1-t1" name="Caso de Teste 03 - Adicionar Produto no Carrinho" line="27">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230814 00:12:27.083" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<msg timestamp="20230814 00:12:27.504" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\mathe\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20230814 00:12:27.081" endtime="20230814 00:12:28.650"/>
+<msg timestamp="20230814 00:34:52.286" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20230814 00:34:52.598" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\mathe\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230814 00:34:52.285" endtime="20230814 00:34:53.907"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230814 00:12:28.651" endtime="20230814 00:12:28.767"/>
+<status status="PASS" starttime="20230814 00:34:53.907" endtime="20230814 00:34:54.029"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:27.081" endtime="20230814 00:12:28.767"/>
+<status status="PASS" starttime="20230814 00:34:52.285" endtime="20230814 00:34:54.029"/>
 </kw>
 <kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
 <kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230814 00:12:28.768" level="INFO">Opening url 'http://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20230814 00:12:28.768" endtime="20230814 00:12:30.548"/>
+<msg timestamp="20230814 00:34:54.031" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20230814 00:34:54.031" endtime="20230814 00:34:56.258"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_ELETRONICOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230814 00:12:30.548" endtime="20230814 00:12:30.600"/>
+<status status="PASS" starttime="20230814 00:34:56.259" endtime="20230814 00:34:56.323"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:28.767" endtime="20230814 00:12:30.600"/>
+<status status="PASS" starttime="20230814 00:34:54.030" endtime="20230814 00:34:56.323"/>
 </kw>
 <kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>title=${TITULO}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230814 00:12:30.606" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
-<status status="PASS" starttime="20230814 00:12:30.601" endtime="20230814 00:12:30.606"/>
+<msg timestamp="20230814 00:34:56.329" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20230814 00:34:56.324" endtime="20230814 00:34:56.329"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:30.601" endtime="20230814 00:12:30.606"/>
+<status status="PASS" starttime="20230814 00:34:56.323" endtime="20230814 00:34:56.330"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:28.767" endtime="20230814 00:12:30.606"/>
+<status status="PASS" starttime="20230814 00:34:54.030" endtime="20230814 00:34:56.330"/>
 </kw>
-<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" library="amazon_resources">
+<kw name="Quando adicionar o produto &quot;Console Xbox Series S&quot; no carrinho" library="amazon_resources">
 <kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=twotabsearchtextbox</arg>
 <arg>text=${PRODUTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230814 00:12:30.607" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20230814 00:12:30.607" endtime="20230814 00:12:30.845"/>
+<msg timestamp="20230814 00:34:56.331" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230814 00:34:56.331" endtime="20230814 00:34:56.577"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:30.607" endtime="20230814 00:12:30.845"/>
+<status status="PASS" starttime="20230814 00:34:56.330" endtime="20230814 00:34:56.577"/>
 </kw>
 <kw name="Clicar no botão de pesquisa" library="amazon_resources">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>locator=nav-search-submit-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230814 00:12:30.847" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
-<status status="PASS" starttime="20230814 00:12:30.846" endtime="20230814 00:12:33.254"/>
+<msg timestamp="20230814 00:34:56.579" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20230814 00:34:56.578" endtime="20230814 00:34:56.758"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:30.846" endtime="20230814 00:12:33.254"/>
+<status status="PASS" starttime="20230814 00:34:56.577" endtime="20230814 00:34:56.758"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:30.606" endtime="20230814 00:12:33.254"/>
-</kw>
-<kw name="Então o título da página deve ficar &quot;Amazon.com.br : Xbox Series S&quot;" library="amazon_resources">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=Amazon.com.br : Xbox Series S</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230814 00:12:33.260" level="INFO">Page title is 'Amazon.com.br : Xbox Series S'.</msg>
-<status status="PASS" starttime="20230814 00:12:33.255" endtime="20230814 00:12:33.260"/>
-</kw>
-<status status="PASS" starttime="20230814 00:12:33.255" endtime="20230814 00:12:33.260"/>
-</kw>
-<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
 <kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Console Xbox Series S&quot;" library="amazon_resources" sourcename="Verificar o resultado da pesquisa se está listando o produto &quot;${PRODUTO}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'${PRODUTO}')]</arg>
+<arg>locator=(//span[contains(.,'${PRODUTO}')])[3]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230814 00:12:33.261" endtime="20230814 00:12:33.295"/>
+<msg timestamp="20230814 00:35:02.059" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230814 00:35:02.059" level="FAIL">Element '(//span[contains(.,'Console Xbox Series S')])[3]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230814 00:34:56.759" endtime="20230814 00:35:02.060"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:33.261" endtime="20230814 00:12:33.295"/>
+<status status="FAIL" starttime="20230814 00:34:56.758" endtime="20230814 00:35:02.061"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:33.261" endtime="20230814 00:12:33.295"/>
+<kw name="Adicionar o produto &quot;Console Xbox Series S&quot; no carrinho" library="amazon_resources" sourcename="Adicionar o produto &quot;${PRODUTO}&quot; no carrinho">
+<status status="NOT RUN" starttime="20230814 00:35:02.061" endtime="20230814 00:35:02.061"/>
+</kw>
+<status status="FAIL" starttime="20230814 00:34:56.330" endtime="20230814 00:35:02.061"/>
+</kw>
+<kw name="Então o produto &quot;Console Xbox Series S&quot; deve ser mostrado no carrinho" library="amazon_resources">
+<status status="NOT RUN" starttime="20230814 00:35:02.061" endtime="20230814 00:35:02.061"/>
 </kw>
 <kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20230814 00:12:33.623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230814 00:12:33.296" endtime="20230814 00:12:33.623"/>
+<msg timestamp="20230814 00:35:02.351" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230814 00:35:02.062" endtime="20230814 00:35:02.351"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230814 00:12:33.623" endtime="20230814 00:12:35.817"/>
+<status status="PASS" starttime="20230814 00:35:02.352" endtime="20230814 00:35:04.548"/>
 </kw>
-<status status="PASS" starttime="20230814 00:12:33.296" endtime="20230814 00:12:35.817"/>
+<status status="PASS" starttime="20230814 00:35:02.062" endtime="20230814 00:35:04.548"/>
 </kw>
-<doc>Esse teste verifica a busca de um produto</doc>
-<tag>busca_produtos</tag>
-<tag>lista_busca</tag>
-<status status="PASS" starttime="20230814 00:12:27.081" endtime="20230814 00:12:35.818"/>
+<doc>Esse teste verifica a adição de um produto no carrinho de compras</doc>
+<tag>adicionar_carrinho</tag>
+<status status="FAIL" starttime="20230814 00:34:52.284" endtime="20230814 00:35:04.548">Element '(//span[contains(.,'Console Xbox Series S')])[3]' not visible after 5 seconds.</status>
 </test>
-<doc>Essa suite testa o site da Amazon.com.br</doc>
-<status status="PASS" starttime="20230814 00:12:26.787" endtime="20230814 00:12:35.819"/>
+<doc>Essa suíte testa o site da Amazon.com.br</doc>
+<status status="FAIL" starttime="20230814 00:34:52.035" endtime="20230814 00:35:04.549"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">busca_produtos</stat>
-<stat pass="1" fail="0" skip="0">lista_busca</stat>
+<stat pass="0" fail="1" skip="0">adicionar_carrinho</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230814 00:12:27.504" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\mathe\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20230814 00:34:52.598" level="WARN">The chromedriver version (114.0.5735.90) detected in PATH at C:\Users\mathe\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (115.0.5790.171); currently, chromedriver 115.0.5790.170 is recommended for chrome 115.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

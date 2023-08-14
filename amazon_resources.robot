@@ -47,14 +47,14 @@ Clicar no botão de pesquisa
     Click Element    locator=nav-search-submit-button
     
 Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
-    Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[3]
+    Wait Until Element Is Visible    locator=//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
 
 Adicionar o produto "${PRODUTO}" no carrinho
     Click Element    locator=//span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'${PRODUTO}')]
     Wait Until Element Is Visible    locator=${BTN_ADD_CARRINHO}
     Click Button    locator=${BTN_ADD_CARRINHO}
-    Wait Until Element Is Visible    locator=${NAO_OBRIGADO}
-    Click Button    locator=${NAO_OBRIGADO}
+    Wait Until Element Is Visible    locator=//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold'][contains(.,'Adicionado ao carrinho')]
+    # Click Button    locator=${NAO_OBRIGADO}
 
 Verificar se o produto "${PRODUTO}" foi adicionado com sucesso
     Wait Until Element Is Visible    locator=${ADICIONADO_NO_CARRINHO}
@@ -70,7 +70,7 @@ Verificar se o carrinho fica vazio
 # GHERKIN STEPS
 Dado que estou na home page da Amazon.com.br
     Acessar a home page do site Amazon.com.br
-    Verificar se o título da página fica "Amazon.com.br | Compre livros, Kindle, Echo, Fire Tv e mais."
+    Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
 
 Quando acessar o menu "Eletrônicos"
     Entrar no menu "Eletrônicos"
